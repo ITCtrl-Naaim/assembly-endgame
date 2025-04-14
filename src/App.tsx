@@ -99,7 +99,7 @@ function App() {
               : guessedLetters.length > 0 && !isLastGuessedCorrect
               ? "status farewell"
               : isLastGuessedCorrect
-              ? "status correct"
+              ? "status correct-guess"
               : "status"
           }
         >
@@ -113,13 +113,13 @@ function App() {
               <span>Game over!</span>
               <span>You lose! Better start learning Assembly😭</span>
             </>
-          ) : (
+          ) : guessedLetters.length > 0 ? (
             <span>
-              {!isLastGuessedCorrect && guessedLetters.length > 0
+              {!isLastGuessedCorrect
                 ? getFarewellText(languages[wrongGuessCount - 1].name)
                 : "Correct Guess! ✔"}
             </span>
-          )}
+          ) : null}
         </section>
         <section className="languages">{languagesElements}</section>
         <section className="word">{lettersElements}</section>

@@ -43,6 +43,7 @@ header p {
 
 main {
   padding: var(--padding-inline);
+  margin-top: 2rem;
 }
 
 .status {
@@ -50,30 +51,25 @@ main {
   padding: 1rem;
   text-align: center;
   max-width: var(--max-width);
-  margin: 1rem auto;
+  margin: auto;
   border-radius: var(--border-radius);
-  opacity: 0;
   transition: 0.3s;
 }
 
 .status.game-won {
   background-color: #10a95b;
-  opacity: 1;
 }
 
 .status.game-lost {
   background-color: #ba2a2a;
-  opacity: 1;
 }
 
 .status.farewell {
   background-color: #7a5ea7;
-  opacity: 1;
 }
 
-.status.correct {
+.status.correct-guess {
   background-color: #298ec6;
-  opacity: 1;
 }
 
 .status span:first-child {
